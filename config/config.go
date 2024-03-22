@@ -11,8 +11,9 @@ import (
 const CONFIG_FILE = "config.json"
 
 type Config struct {
-	ApiKey     string `json:"apiKey"`
-	MerchantId string `json:"merchantId"`
+	ApiKey      string `json:"apiKey"`
+	MerchantId  string `json:"merchantId"`
+	CallbackUrl string `json:"callbackUrl"`
 }
 
 func (c *Config) Validate() error {

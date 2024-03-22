@@ -8,7 +8,6 @@ import (
 
 type Args struct {
 	InvoiceUUID string `json:"invoiceUUID"`
-	CallbackUrl string `json:"callbackUrl"`
 }
 
 // Validate Iterates over struct, and throws error

@@ -19,7 +19,7 @@ func main() {
 	cliArgs.Validate()
 
 	webhookDto := cryptomus.TestWebhookDto{
-		UrlCallback: cliArgs.CallbackUrl,
+		UrlCallback: cfg.CallbackUrl,
 		Currency:    "USDT",
 		Network:     "TRON",
 		UUID:        cliArgs.InvoiceUUID,
