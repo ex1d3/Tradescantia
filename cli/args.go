@@ -8,12 +8,15 @@ import (
 
 type Args struct {
 	InvoiceUUID string `json:"invoiceUUID"`
+	Currency    string `json:"currency"`
+	Network     string `json:"network"`
+	Status      string `json:"status"`
 }
 
 // Validate Iterates over struct, and throws error
 // if any field of struct is ""
-func (args Args) Validate() {
-	value := reflect.ValueOf(args)
+func (args *Args) Validate() {
+	value := reflect.ValueOf(*args)
 
 	for i := 0; i < value.NumField(); i++ {
 		if value.Field(i).Interface() == "" {

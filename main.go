@@ -15,15 +15,15 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	cliArgs := cli.ParseArgs()
+	cliArgs := cli.Parse()
 	cliArgs.Validate()
 
 	webhookDto := cryptomus.TestWebhookDto{
 		UrlCallback: cfg.CallbackUrl,
-		Currency:    "USDT",
-		Network:     "TRON",
+		Currency:    cliArgs.Currency,
+		Network:     cliArgs.Network,
 		UUID:        cliArgs.InvoiceUUID,
-		Status:      "paid",
+		Status:      cliArgs.Status,
 	}
 
 	httpClient := http.Client{}
