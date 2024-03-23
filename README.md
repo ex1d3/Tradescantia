@@ -22,5 +22,5 @@ go build
 
 # Call test webhook
 
-./tradescantia urlCallback=https://example.com/webhook invoiceUUID=123 
+./tradescantia --invoiceUUID=123 --currency=USDT --network=tron --status=paid
 ```
