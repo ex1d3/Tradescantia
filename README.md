@@ -5,7 +5,7 @@ Tradescantia is the open-source Cryptomus webhook caller written in native Go.
 
 - Lightweight
 - Easy to use
-- Useful for developers and QA`s.
+- 0 dependencies
 
 ## Install & usage
 
